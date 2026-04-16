@@ -1,0 +1,18 @@
+[
+  "productId",
+  "name",
+  "categoryName",
+  "brandName",
+  "currentPrice",
+  "marketPrice",
+  "inventory",
+  "salesVolume",
+  "averageRating",
+  "reviewNumber",
+  "image",
+  "desc",
+  "keywords",
+  "hot",
+  "newArrival",
+  "productStatus"
+]

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Field Converter Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .status {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    .status.success {
+      background-color: #d4edda;
+      color: #155724;
+      display: block;
+    }
+    .status.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h2>字段转换工具 - 设置</h2>
+  
+  <div class="form-group">
+    <label for="apiKey">智谱AI API密钥*:</label>
+    <input type="password" id="apiKey" placeholder="输入你的API密钥 (例如: afeb8b9757024175a065c96ddc36f7a1.pEjURerHIgobCKLM)">
+  </div>
+
+  <div class="form-group">
+    <label for="model">AI模型*:</label>
+    <select id="model">
+      <option value="glm-5.1">glm-5.1</option>
+      <option value="glm-4.7-flash">glm-4.7-flash (推荐)</option>
+      <option value="glm-4-vision">glm-4-vision</option>
+      <option value="glm-4">glm-4</option>
+    </select>
+  </div>
+
+  <button id="saveBtn">保存设置</button>
+  <div id="status" class="status"></div>
+
+  <hr style="margin-top: 30px;">
+  <h3>使用说明</h3>
+  <ul>
+    <li>API密钥可从 <a href="https://open.bigmodel.cn/console/apikeys" target="_blank">智谱AI开放平台</a> 获取</li>
+    <li>确保密钥具有文本处理权限</li>
+  </ul>
+
+  <script src="options.js"></script>
+</body>
+</html>

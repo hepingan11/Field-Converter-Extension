@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Field Converter Extension",
+  "version": "1.0",
+  "description": "Chrome extension to convert product fields using AI",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://open.bigmodel.cn/*"
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Field Converter"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.taobao.com/*", "*://*.jd.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
